@@ -1,6 +1,6 @@
 /.idea
+*.iml
 /was8-ear/credentials.properties
 /was8-war/target
 /was8-ear/target
-/was8-ear/was8-ear.iml
-/was8-war/was8-war.iml
+/was8-sb-war/target

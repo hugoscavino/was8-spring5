@@ -8,6 +8,7 @@
     <modules>
         <module>was8-war</module>
         <module>was8-ear</module>
+        <module>was8-sb-war</module>
     </modules>
 
     <properties>
