@@ -25,6 +25,7 @@
     </properties>
 
     <build>
+        <finalName>was8-sb</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -94,6 +95,39 @@
             <version>1.2</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Caused by: java.lang.ClassNotFoundException: javax.validation.ParameterNameProvider -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+
+        <!--
+            Validation Starter no longer included in web starters
+            https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.3-Release-Notes#validation-starter-no-longer-included-in-web-starters
+        -->
+
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.1.7.Final</version>
+        </dependency>
+
+        <!-- Caused by: java.lang.NoClassDefFoundError: javax/el/ELManager -->
+        <!--
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>3.0.1-b08</version>
+        </dependency>
+
     </dependencies>
 
 </project>

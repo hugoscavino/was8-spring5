@@ -76,14 +76,6 @@
                                 <include name="*.ear" />
                             </fileset>
                         </scp>
-                        <!--
-                        <sshexec
-                                host="${scp.host}"
-                                username="${scp.user.name}" trust="true"
-                                password="${scp.password}"
-                                failonerror="true"
-                                command="/.../deploy_ear.sh"/>
-                        -->
                     </target>
                 </configuration>
                 <executions>
