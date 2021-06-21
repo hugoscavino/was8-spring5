@@ -1,5 +1,17 @@
 # Deploying Spring 5.x and Spring Boot 2.x Applications on WAS 8.5.X
 
+## Summary and Abstract
+Article and accompanying code project go over the method which to overcome obstacles migrating to Spring 5 
+and Spring Boot 2 applications in a WebSphere 8.5 (WAS) application container. The problems arise as Spring 
+is using updated validation jars and WAS by default use a PARENT FIRST class loading strategy that would 
+stand in the way of an upgrade.
+
+Specifically, several options are presented on how to change the class loader to use PARENT LAST. In addition,
+we call out the specific jars required for Spring and Spring Boot in a sample JSP project in your maven pom.xml.
+
+It is expected, with these changes, you can migrate to a supported version of Spring while maintaining your 
+investment in WAS 8.5. That is until those products reach end of life.
+
 ## Problems
 
 ### Problem 1
@@ -8,7 +20,7 @@ By default, WebSphere Application Server 8.5.x ( WAS8) uses the PARENT_FIRST cla
 means WAS will load its version of application server (EE) jars first and prioritize itself over what is in your
 distribution.
 
-For example, you may have one version of the validation api in your WEB-INF\lib directory but the class path will 
+For example, you may have one version of the validation api in your WEB-INF\lib directory, but the class path will 
 favor the WAS one first. Effectively shadow-banning your version in favor of the JEE version that came with WAS. This
 make sense, IBM spent a lot of time certifying and testing their application server with a known set of javax.* jars
 and it wants to keep it that way by default.
