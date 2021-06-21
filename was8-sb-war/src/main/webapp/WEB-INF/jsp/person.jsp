@@ -5,7 +5,7 @@
 <html>
 <head><%@ page isELIgnored="false" %>
 <meta charset="ISO-8859-1">
-<title>Spring 5 MVC - Person Example scavino.org aka PeruBoy</title>
+<title>Spring 5 MVC - Person</title>
 </head>
    <body>
       <h1>Hello</h1>

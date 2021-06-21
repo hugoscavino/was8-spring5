@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Manage Person. View only in this instance
+ * Manage a REST (JSON) Person. View only in this instance
  */
 @RestController
 public class PersonRestController {
@@ -13,7 +13,7 @@ public class PersonRestController {
     /**
      * Creates an arbitrary JSON Person
      * @see Person
-     * @return Person hard coded
+     * @return Person hard coded to be tom jones
      */
     @GetMapping(value = "/api/person")
     public Person restPerson() {

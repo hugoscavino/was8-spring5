@@ -1,24 +1,21 @@
 package org.scavino.sb.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * Manage Person. View only in this instance
+ * Manage Home Page.
  */
 @Controller
 public class HomeController {
 
     /**
-     * Creates an arbitrary person and adds person object to the Model with and attribute of
-     * 'person'.
+     * Load the index.jsp page
      *
-     * @param model spring model object
-     * @return resource name to eventually map to. In this case it is index or the main page
+     * @return Handler to the the main page index.jsp
      */
     @GetMapping(value = "/")
-    public String handler(Model model) {
+    public String handler() {
         return "index";
     }
 }
